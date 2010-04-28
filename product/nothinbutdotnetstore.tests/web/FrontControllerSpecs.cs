@@ -1,7 +1,9 @@
+using System;
 using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdd.mocking.rhino;
 using developwithpassion.bdddoc.core;
+using MbUnit.Framework;
 using nothinbutdotnetstore.web.core;
 using Rhino.Mocks;
 
@@ -22,11 +24,12 @@ namespace nothinbutdotnetstore.tests.web
                 command_registry = the_dependency<CommandRegistry>();
 
                 request = an<Request>();
-                command = an<RequestCommand>();
+                command_that_can_handle_the_request = an<RequestCommand>();
 
 
-                command_registry.Stub(x => x.get_command_that_can_handle(request)).Return(command);
+                command_registry.Stub(x => x.get_command_that_can_handle(request)).Return(command_that_can_handle_the_request);
             };
+
 
             because b = () =>
             {
@@ -36,10 +39,10 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_dispatch_the_processing_to_the_command_for_the_request = () =>
             {
-                command.received(x => x.run(request));
+                command_that_can_handle_the_request.received(x => x.run(request));
             };
 
-            static RequestCommand command;
+            static RequestCommand command_that_can_handle_the_request;
             static Request request;
             static CommandRegistry command_registry;
         }
