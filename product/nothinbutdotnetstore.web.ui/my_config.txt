@@ -1,0 +1,2 @@
+﻿The database will be installed at C:\databases and the logging level is
+set to DEBUG

@@ -42,6 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\RawRequestHandler.cs" />
+    <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\RequestCommand.cs" />
+    <Compile Include="web\core\RequestFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
