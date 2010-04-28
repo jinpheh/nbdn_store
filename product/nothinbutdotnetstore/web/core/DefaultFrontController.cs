@@ -1,5 +1,3 @@
-using System;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultFrontController : FrontController
@@ -13,7 +11,8 @@ namespace nothinbutdotnetstore.web.core
 
         public void process(Request request)
         {
-            command_registry.get_command_that_can_handle(request).run(request);
+            var command_that_can_handle_request = command_registry.get_command_that_can_handle(request);
+            command_that_can_handle_request.process(request);
         }
     }
 }

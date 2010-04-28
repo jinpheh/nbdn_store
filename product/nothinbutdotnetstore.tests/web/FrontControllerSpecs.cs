@@ -39,7 +39,7 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_dispatch_the_processing_to_the_command_for_the_request = () =>
             {
-                command_that_can_handle_the_request.received(x => x.run(request));
+                command_that_can_handle_the_request.received(x => x.process(request));
             };
 
             static RequestCommand command_that_can_handle_the_request;
