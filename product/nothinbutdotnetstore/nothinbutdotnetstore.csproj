@@ -41,18 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\Mapper.cs" />
+    <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="tasks\CatalogTasks.cs" />
     <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
     <Compile Include="web\application\DepartmentNameParser.cs" />
+    <Compile Include="web\application\mappers\DepartmentMapper.cs" />
+    <Compile Include="web\application\PayloadKeys.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\application\ViewSubDepartmentsInDepartment.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultRequest.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
+    <Compile Include="web\core\PayloadKey.cs" />
     <Compile Include="web\core\RawRequestHandler.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
