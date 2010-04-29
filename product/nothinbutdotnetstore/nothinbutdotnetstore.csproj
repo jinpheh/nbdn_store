@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="developwithpassion.bdd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\developwithpassion.bdd\developwithpassion.bdd.dll</HintPath>
+    </Reference>
+    <Reference Include="developwithpassion.bdddoc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\developwithpassion.bdddoc\developwithpassion.bdddoc.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -47,12 +55,14 @@
     <Compile Include="tasks\CatalogTasks.cs" />
     <Compile Include="model\Product.cs" />
     <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
+    <Compile Include="web\application\CartManager.cs" />
     <Compile Include="web\application\DepartmentNameParser.cs" />
     <Compile Include="web\application\mappers\DepartmentMapper.cs" />
     <Compile Include="web\application\PayloadKeys.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\application\ViewProductsInDepartment.cs" />
     <Compile Include="web\application\ViewSubDepartmentsInDepartment.cs" />
+    <Compile Include="web\application\AddProductToCart.cs" />
     <Compile Include="web\core\ApplicationCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />

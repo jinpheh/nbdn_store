@@ -73,6 +73,8 @@
     <Compile Include="examples\CalculatorSpecs.cs" />
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="utility\ObjectMother.cs" />
+    <Compile Include="web\AddProductToCartSpecs.cs" />
+    <Compile Include="web\CartTasks.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\DepartmentMapperSpecs.cs" />
     <Compile Include="web\PayloadKeySpecs.cs" />
