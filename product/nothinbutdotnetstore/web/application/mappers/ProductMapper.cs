@@ -9,7 +9,12 @@ namespace nothinbutdotnetstore.web.application.mappers
 	{
 		public Product map(NameValueCollection input)
 		{
-			throw new NotImplementedException();
+			return new Product
+			{
+				Name = PayloadKeys.product.Name.map_from(input),
+				Description = PayloadKeys.product.Description.map_from(input),
+				Price = PayloadKeys.product.Price.map_from(input)
+			};
 		}
 	}
 }

@@ -4,6 +4,7 @@ using System.Collections.Specialized;
  using developwithpassion.bdddoc.core;
  using nothinbutdotnetstore.infrastructure;
  using nothinbutdotnetstore.model;
+using nothinbutdotnetstore.web.application;
 using nothinbutdotnetstore.web.application.mappers;
 
 namespace nothinbutdotnetstore.tests.web
@@ -25,14 +26,15 @@ namespace nothinbutdotnetstore.tests.web
  				desc = "blah";
  				price = (decimal) 5.30F;
  				item_data = new NameValueCollection();
- 				product = new Product(name, desc, price);
+				item_data.Add(PayloadKeys.product.Name, name);
+				item_data.Add(PayloadKeys.product.Description, desc);
+				item_data.Add(PayloadKeys.product.Price, price.ToString());
  			};
 
  			because b = () =>
  			{
  				result = sut.map(item_data);
  			};
-
         
  			it should_return_the_product_from_collection = () =>
  			{
@@ -46,7 +48,6 @@ namespace nothinbutdotnetstore.tests.web
  			static string name;
  			static string desc;
  			static decimal price;
- 			static Product product;
  		}
  	}
  }

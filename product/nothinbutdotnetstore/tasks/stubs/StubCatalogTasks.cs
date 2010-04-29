@@ -19,7 +19,7 @@ namespace nothinbutdotnetstore.tasks.stubs
 
     	public IEnumerable<Product> get_all_products_in_department(Department department)
     	{
-    		throw new NotImplementedException();
+    		return Enumerable.Range(1000, 50).Select(x => new Product {Name = x.ToString("product 0")});
     	}
     }
 }
