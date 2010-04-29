@@ -18,7 +18,7 @@ namespace nothinbutdotnetstore.tests.web
         {
         }
 
-        [Concern(typeof(ViewSubDepartmentsInDepartment))]
+        [Concern(typeof (ViewSubDepartmentsInDepartment))]
         public class when_displaying_the_list_of_the_sub_departments_in_department : concern
         {
             context c = () =>
@@ -26,11 +26,12 @@ namespace nothinbutdotnetstore.tests.web
                 request = an<Request>();
                 sub_departments = new List<Department>();
                 response_engine = the_dependency<ResponseEngine>();
+                department = new Department();
                 catalog_tasks = the_dependency<CatalogTasks>();
 
 
-                 
-                catalog_tasks.Stub(x => x.get_all_sub_departments_in_department("")).IgnoreArguments().Return(sub_departments);
+                request.Stub(x => x.map<Department>()).Return(department);
+                catalog_tasks.Stub(x => x.get_all_sub_departments_in_department(department)).Return(sub_departments);
             };
 
             because b = () =>
@@ -48,6 +49,7 @@ namespace nothinbutdotnetstore.tests.web
             static Request request;
             static CatalogTasks catalog_tasks;
             static IEnumerable<Department> sub_departments;
+            static Department department;
         }
     }
 }

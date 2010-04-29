@@ -6,7 +6,7 @@ using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
-    public class ViewSubDepartmentsInDepartment: ApplicationCommand
+    public class ViewSubDepartmentsInDepartment : ApplicationCommand
     {
         CatalogTasks catalog_tasks;
         ResponseEngine response_engine;
@@ -25,7 +25,7 @@ namespace nothinbutdotnetstore.web.application
         public void process(Request request)
         {
             response_engine.display(catalog_tasks.get_all_sub_departments_in_department(
-                ( request.parameter )));
+                (request.map<Department>())));
         }
     }
 }
