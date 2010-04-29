@@ -76,6 +76,7 @@
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\DepartmentMapperSpecs.cs" />
     <Compile Include="web\PayloadKeySpecs.cs" />
+    <Compile Include="web\ProductMapperSpecs.cs" />
     <Compile Include="web\RequestCommandSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="web\ViewMainDepartmentsSpecs.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="web\ViewProductsInDepartmentSpecs.cs" />
     <Compile Include="web\ViewSubDepartmentsInDepartmentsSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
